@@ -6,7 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "sports",
+    "sport",
+    "hbcu",
+    "hbcu sports summit",
+    "BLK-letics",
+    "football",
+    "junior high",
+    "high school",
+    "college",
+    "nfl"
+  ],
+  "author": "Jerry Victor",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serverless-http": "^3.2.0"
+  }
 }
