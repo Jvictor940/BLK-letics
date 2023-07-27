@@ -20,6 +20,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 })
 
+
 app.get("/users/:userId", async function (req, res) {
   const params = {
     TableName: USERS_TABLE,
