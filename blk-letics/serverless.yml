@@ -8,6 +8,7 @@ custom:
 
 provider:
   name: aws
+  deploymentMethod: direct
   runtime: nodejs18.x
   iam:
     role:
