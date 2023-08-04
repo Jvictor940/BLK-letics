@@ -3,6 +3,9 @@ const {
   DynamoDBDocumentClient,
   GetCommand,
   PutCommand,
+  DeleteCommand, 
+  UpdateCommand, 
+  ScanCommand
 } = require("@aws-sdk/lib-dynamodb");
 const express = require("express");
 const serverless = require("serverless-http");
@@ -82,9 +85,9 @@ app.post("/users", async function (req, res) {
       userId: userId,
       name: name,
       university: university,
-      title, 
-      email, 
-      password
+      title: title, 
+      email: email,
+      password: password
     },
   };
 
