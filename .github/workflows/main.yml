@@ -1,4 +1,4 @@
-name: Deploy BLK-Letics Lambda
+name: Deploy Lambda
 
 on:
   push:
