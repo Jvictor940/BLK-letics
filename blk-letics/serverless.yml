@@ -30,6 +30,8 @@ provider:
     USERS_TABLE: ${self:custom.tableName}
     ATHLETES_TABLE: ${self:custom.tableNameAthlete}
     # UNIVERSITIES_TABLE: ${self:custom.tableNameUniversity}
+# plugins:
+#   - serverless plugin install -n serverless-github-action@v3.2
 
 functions:
   api:
