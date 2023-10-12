@@ -30,8 +30,9 @@ provider:
     USERS_TABLE: ${self:custom.tableName}
     ATHLETES_TABLE: ${self:custom.tableNameAthlete}
     # UNIVERSITIES_TABLE: ${self:custom.tableNameUniversity}
-# plugins:
-#   - serverless plugin install -n serverless-github-action@v3.2
+plugins:
+  - serverless plugin install -n serverless-github-action@v3.2
+  - serverless-iam-roles-per-function
 
 functions:
   api:
@@ -66,6 +67,9 @@ resources:
         KeySchema:
           - AttributeName: athleteId
             KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:custom.tableNameAthlete}
 
@@ -78,5 +82,8 @@ resources:
         KeySchema:
           - AttributeName: universityId
             KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:custom.tableNameUniversity}
